@@ -10,4 +10,8 @@ defmodule DungeonCrawl.Room.Action do
   def rest, do: %Action{id: :rest, label: "Take a better look and rest."}
   @spec search :: %DungeonCrawl.Room.Action{id: :search, label: <<_::128>>}
   def search, do: %Action{id: :search, label: "Search the room."}
+
+  defimpl String.Chars do
+    def to_string(room), do: room.label
+  end
 end
