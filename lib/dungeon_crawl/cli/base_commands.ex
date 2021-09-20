@@ -1,4 +1,4 @@
-defmodule DungeonCrawl.BaseCommands do
+defmodule DungeonCrawl.CLI.BaseCommands do
   alias Mix.Shell.IO, as: Shell
 
   @spec display_options(list) :: list()

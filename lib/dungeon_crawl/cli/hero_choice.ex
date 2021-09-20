@@ -1,6 +1,6 @@
 defmodule DungeonCrawl.CLI.HeroChoice do
   alias Mix.Shell.IO, as: Shell
-  import DungeonCrawl.BaseCommands
+  import DungeonCrawl.CLI.BaseCommands
 
   @spec start :: atom | %{:description => any, optional(any) => any}
   def start do
