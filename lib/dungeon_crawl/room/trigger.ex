@@ -1,3 +1,5 @@
 defmodule DungeonCrawl.Room.Trigger do
-  @callback run(character :: any, action :: any) :: any
+  alias DungeonCrawl.Character
+  alias DungeonCrawl.Room.Action
+  @callback run(character :: Character.t(), action :: Action.t()) :: {Character.t(), atom}
 end
