@@ -32,6 +32,8 @@ defmodule DungeonCrawl.Character do
     update_hit_points(character, function)
   end
 
+  @spec update_hit_points(DungeonCrawl.Character.t(), (DungeonCrawl.Character.t() -> number())) ::
+          DungeonCrawl.Character.t()
   defp update_hit_points(character, function) do
     new_hit_points = function.(character)
     %{character | hit_points: new_hit_points}
