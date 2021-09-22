@@ -1,8 +1,14 @@
 defmodule DungeonCrawl.Room do
   alias DungeonCrawl.Room
   alias DungeonCrawl.Room.Triggers
-
   import DungeonCrawl.Room.Action
+
+  @type t :: %DungeonCrawl.Room{
+          description: nil,
+          actions: [],
+          trigger: nil
+        }
+
   defstruct description: nil, actions: [], trigger: nil
 
   def all do

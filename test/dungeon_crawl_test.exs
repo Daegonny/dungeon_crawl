@@ -1,6 +1,7 @@
 defmodule DungeonCrawlTest do
   use ExUnit.Case
   alias DungeonCrawl.Character
+  alias DungeonCrawl.Heroes
   doctest DungeonCrawl
 
   @hero %Character{hit_points: 10, max_hit_points: 15}
@@ -32,5 +33,11 @@ defmodule DungeonCrawlTest do
       |> Character.heal(35)
 
     assert hit_points == max_hit_points
+  end
+
+  test "I should be able to pick a hero" do
+    heroes = Heroes.all()
+    actual = length(heroes)
+    assert actual == 3
   end
 end
